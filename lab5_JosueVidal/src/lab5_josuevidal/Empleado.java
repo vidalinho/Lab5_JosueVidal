@@ -10,12 +10,13 @@ package lab5_josuevidal;
  * @author josue
  */
 public class Empleado {
-   private String nombre;
-   private int nacimiento;
-   private String usuario;
-   private String contra;
-   private String correo;
-   private String puesto;
+
+    private String nombre;
+    private int nacimiento;
+    private String usuario;
+    private String contra;
+    private String correo;
+    private String puesto;
 
     public Empleado() {
     }
@@ -79,7 +80,7 @@ public class Empleado {
 
     @Override
     public String toString() {
-        return "Empleado{" + "nombre=" + nombre + ", nacimiento=" + nacimiento + ", usuario=" + usuario + ", contra=" + contra + ", correo=" + correo + ", puesto=" + puesto + '}';
+        return nombre;
     }
-   
+
 }

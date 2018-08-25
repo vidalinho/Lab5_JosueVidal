@@ -5,6 +5,12 @@
  */
 package lab5_josuevidal;
 
+import java.util.ArrayList;
+import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
+
 /**
  *
  * @author josue
@@ -16,8 +22,54 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
-        String usuario="administrador";
-        String contra="hola";
+        DefaultTreeModel modeloARBOL4 = (DefaultTreeModel) jt_aseo.getModel();
+        DefaultMutableTreeNode raiz4 = (DefaultMutableTreeNode) modeloARBOL4.getRoot();
+        pisos = new DefaultMutableTreeNode("Limpieza de pisos");
+        vidrios = new DefaultMutableTreeNode("Limpieza de vidrios");
+        mesas = new DefaultMutableTreeNode("Limpieza de mesas");
+        raiz4.add(pisos);
+        raiz4.add(vidrios);
+        raiz4.add(mesas);
+        modeloARBOL4.reload();
+
+        DefaultTreeModel modeloARBOL3 = (DefaultTreeModel) jt_dulceria.getModel();
+        DefaultMutableTreeNode raiz3 = (DefaultMutableTreeNode) modeloARBOL3.getRoot();
+        chocolates = new DefaultMutableTreeNode("Chocolates");
+        gomitas = new DefaultMutableTreeNode("Gomitas");
+        chicles = new DefaultMutableTreeNode("Chicles");
+        paletas = new DefaultMutableTreeNode("Paletas");
+        raiz3.add(chocolates);
+        raiz3.add(gomitas);
+        raiz3.add(chicles);
+        raiz3.add(paletas);
+        modeloARBOL3.reload();
+
+        DefaultTreeModel modeloARBOL2 = (DefaultTreeModel) jt_peliculas.getModel();
+        DefaultMutableTreeNode raiz2 = (DefaultMutableTreeNode) modeloARBOL2.getRoot();
+        terror = new DefaultMutableTreeNode("Terror");
+        comedia = new DefaultMutableTreeNode("Comedia");
+        romance = new DefaultMutableTreeNode("Romance");
+        drama = new DefaultMutableTreeNode("Drama");
+        accion = new DefaultMutableTreeNode("Accion");
+        infantil = new DefaultMutableTreeNode("Infantil");
+        raiz2.add(terror);
+        raiz2.add(comedia);
+        raiz2.add(romance);
+        raiz2.add(drama);
+        raiz2.add(accion);
+        raiz2.add(infantil);
+        modeloARBOL2.reload();
+
+        DefaultTreeModel modeloARBOL = (DefaultTreeModel) jt_empleados.getModel();
+        DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modeloARBOL.getRoot();
+        boleteria = new DefaultMutableTreeNode("Boleteria");
+        dulceria = new DefaultMutableTreeNode("Dulceria");
+        aseo = new DefaultMutableTreeNode("Aseo");
+        raiz.add(boleteria);
+        raiz.add(dulceria);
+        raiz.add(aseo);
+        modeloARBOL.reload();
+
     }
 
     /**
@@ -29,31 +81,1053 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jd_dulceria = new javax.swing.JDialog();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        tf_nombred = new javax.swing.JTextField();
+        tf_sabor = new javax.swing.JTextField();
+        jButton3 = new javax.swing.JButton();
+        cb_categoria = new javax.swing.JComboBox<>();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jt_dulceria = new javax.swing.JTree();
+        jButton8 = new javax.swing.JButton();
+        jd_boleteria = new javax.swing.JDialog();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        tf_nombrep = new javax.swing.JTextField();
+        tf_duracion = new javax.swing.JTextField();
+        tf_clasificacion = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jButton4 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jt_peliculas = new javax.swing.JTree();
+        jButton9 = new javax.swing.JButton();
+        jd_aseo = new javax.swing.JDialog();
+        jTabbedPane3 = new javax.swing.JTabbedPane();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
+        tf_nombreA = new javax.swing.JTextField();
+        tf_descripcion = new javax.swing.JTextField();
+        cb_funcion = new javax.swing.JComboBox<>();
+        jPanel6 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jt_aseo = new javax.swing.JTree();
+        jButton7 = new javax.swing.JButton();
+        jd_empleados = new javax.swing.JDialog();
+        jTabbedPane4 = new javax.swing.JTabbedPane();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel26 = new javax.swing.JLabel();
+        cb_puesto = new javax.swing.JComboBox<>();
+        jLabel27 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        tf_nombre = new javax.swing.JTextField();
+        tf_nacimiento = new javax.swing.JTextField();
+        tf_usuario = new javax.swing.JTextField();
+        tf_contra = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        tf_correo = new javax.swing.JTextField();
+        jPanel8 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jt_empleados = new javax.swing.JTree();
+        jButton2 = new javax.swing.JButton();
+        menu_dulceria = new javax.swing.JPopupMenu();
+        EliminarD = new javax.swing.JMenuItem();
+        AgregarD = new javax.swing.JMenuItem();
+        ModificarD = new javax.swing.JMenuItem();
+        menu_boleteria = new javax.swing.JPopupMenu();
+        EliminarB = new javax.swing.JMenuItem();
+        AgregarB = new javax.swing.JMenuItem();
+        ModificarB = new javax.swing.JMenuItem();
+        menu_empleados = new javax.swing.JPopupMenu();
+        EliminarE = new javax.swing.JMenuItem();
+        AgregarE = new javax.swing.JMenuItem();
+        ModificarE = new javax.swing.JMenuItem();
+        menu_aseos = new javax.swing.JPopupMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        tf_usuarioActual = new javax.swing.JTextField();
+        ps_contraActual = new javax.swing.JPasswordField();
+
+        jLabel12.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
+        jLabel12.setText("Crear Dulce");
+
+        jLabel13.setText("Nombre:");
+
+        jLabel14.setText("Sabor:");
+
+        jLabel15.setText("Categoria:");
+
+        jButton3.setText("Crear");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+
+        cb_categoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chocolates", "Gomitas", "Paletas", "Chicles" }));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(94, 94, 94)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel15))
+                        .addGap(45, 45, 45)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel12)
+                            .addComponent(tf_nombred)
+                            .addComponent(tf_sabor)
+                            .addComponent(cb_categoria, 0, 237, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(257, 257, 257)
+                        .addComponent(jButton3)))
+                .addContainerGap(160, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel12)
+                        .addGap(35, 35, 35)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel13)
+                            .addComponent(tf_nombred, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(47, 47, 47)
+                        .addComponent(jLabel14))
+                    .addComponent(tf_sabor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(47, 47, 47)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(cb_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(57, 57, 57)
+                .addComponent(jButton3)
+                .addContainerGap(92, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Crear", jPanel1);
+
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Dulces");
+        jt_dulceria.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jt_dulceria.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt_dulceriaMouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(jt_dulceria);
+
+        jButton8.setText("Visualizar");
+        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton8MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(255, 255, 255)
+                .addComponent(jButton8)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(203, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(197, 197, 197))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addComponent(jButton8)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41))
+        );
+
+        jTabbedPane1.addTab("Visualizar", jPanel2);
+
+        javax.swing.GroupLayout jd_dulceriaLayout = new javax.swing.GroupLayout(jd_dulceria.getContentPane());
+        jd_dulceria.getContentPane().setLayout(jd_dulceriaLayout);
+        jd_dulceriaLayout.setHorizontalGroup(
+            jd_dulceriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+        );
+        jd_dulceriaLayout.setVerticalGroup(
+            jd_dulceriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+        );
+
+        jLabel16.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
+        jLabel16.setText("Crear pelicula");
+
+        jLabel17.setText("Nombre:");
+
+        jLabel18.setText("Duracion:");
+
+        jLabel19.setText("Clasificacion:");
+
+        jLabel20.setText("Categoria:");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Terror", "Comedia", "Romance", "Drama", "Accion", "Infantil", " " }));
+
+        jButton4.setText("crear");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(182, 182, 182)
+                        .addComponent(jLabel16))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(123, 123, 123)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel18)
+                            .addComponent(jLabel17)
+                            .addComponent(jLabel19)
+                            .addComponent(jLabel20))
+                        .addGap(40, 40, 40)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton4)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(tf_duracion)
+                                .addComponent(tf_clasificacion)
+                                .addComponent(tf_nombrep)
+                                .addComponent(jComboBox1, 0, 173, Short.MAX_VALUE)))))
+                .addContainerGap(139, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel16)
+                        .addGap(50, 50, 50)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel17)
+                            .addComponent(tf_nombrep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(32, 32, 32)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel18)
+                            .addComponent(tf_duracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(39, 39, 39)
+                        .addComponent(jLabel19))
+                    .addComponent(tf_clasificacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addComponent(jButton4)
+                .addContainerGap())
+        );
+
+        jTabbedPane2.addTab("Crear", jPanel3);
+
+        treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Peliculas");
+        jt_peliculas.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane3.setViewportView(jt_peliculas);
+
+        jButton9.setText("Visualizar");
+        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton9MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(159, 159, 159)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(230, 230, 230)
+                        .addComponent(jButton9)))
+                .addContainerGap(180, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(15, Short.MAX_VALUE)
+                .addComponent(jButton9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39))
+        );
+
+        jTabbedPane2.addTab("Visualizar", jPanel4);
+
+        javax.swing.GroupLayout jd_boleteriaLayout = new javax.swing.GroupLayout(jd_boleteria.getContentPane());
+        jd_boleteria.getContentPane().setLayout(jd_boleteriaLayout);
+        jd_boleteriaLayout.setHorizontalGroup(
+            jd_boleteriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 555, Short.MAX_VALUE)
+            .addGroup(jd_boleteriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jd_boleteriaLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jd_boleteriaLayout.setVerticalGroup(
+            jd_boleteriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 444, Short.MAX_VALUE)
+            .addGroup(jd_boleteriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jd_boleteriaLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jLabel21.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
+        jLabel21.setText("Crear Aseo");
+
+        jLabel22.setText("Nombre:");
+
+        jLabel23.setText("Descripcion:");
+
+        jLabel24.setText("Funcion:");
+
+        jButton5.setText("Crear");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
+
+        cb_funcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Limpieza de pisos", "Limpieza de vidrios", "Limpieza de mesas", " " }));
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(230, 230, 230)
+                        .addComponent(jButton5))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel23)
+                            .addComponent(jLabel22)
+                            .addComponent(jLabel24))
+                        .addGap(75, 75, 75)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel21)
+                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(tf_nombreA)
+                                .addComponent(tf_descripcion)
+                                .addComponent(cb_funcion, 0, 181, Short.MAX_VALUE)))))
+                .addContainerGap(170, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(jLabel21)
+                .addGap(72, 72, 72)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel22)
+                    .addComponent(tf_nombreA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23)
+                    .addComponent(tf_descripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24)
+                    .addComponent(cb_funcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+                .addComponent(jButton5)
+                .addGap(36, 36, 36))
+        );
+
+        jTabbedPane3.addTab("Crear", jPanel5);
+
+        treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Aseos");
+        jt_aseo.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane4.setViewportView(jt_aseo);
+
+        jButton7.setText("Visualizar");
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(169, 169, 169)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(233, 233, 233)
+                        .addComponent(jButton7)))
+                .addContainerGap(194, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap(25, Short.MAX_VALUE)
+                .addComponent(jButton7)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(63, 63, 63))
+        );
+
+        jTabbedPane3.addTab("Visualizar", jPanel6);
+
+        javax.swing.GroupLayout jd_aseoLayout = new javax.swing.GroupLayout(jd_aseo.getContentPane());
+        jd_aseo.getContentPane().setLayout(jd_aseoLayout);
+        jd_aseoLayout.setHorizontalGroup(
+            jd_aseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane3)
+        );
+        jd_aseoLayout.setVerticalGroup(
+            jd_aseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane3)
+        );
+
+        jLabel26.setText("Fecha de Nacimineto:");
+
+        cb_puesto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dulceria", "Boleteria", "Aseo", "" }));
+
+        jLabel27.setText("Usuario:");
+
+        jButton6.setText("crear");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
+
+        jLabel28.setText("Contrasena:");
+
+        jLabel29.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
+        jLabel29.setText("Crear Empleado");
+
+        jLabel30.setText("Correo:");
+
+        jLabel31.setText("Puesto:");
+
+        jLabel32.setText("Nombre:");
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap(56, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel7Layout.createSequentialGroup()
+                            .addGap(151, 151, 151)
+                            .addComponent(jButton6))
+                        .addGroup(jPanel7Layout.createSequentialGroup()
+                            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel31)
+                                .addComponent(jLabel26)
+                                .addComponent(jLabel32)
+                                .addComponent(jLabel27)
+                                .addComponent(jLabel28)
+                                .addComponent(jLabel30))
+                            .addGap(59, 59, 59)
+                            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(tf_nombre)
+                                .addComponent(tf_nacimiento)
+                                .addComponent(tf_usuario)
+                                .addComponent(tf_contra)
+                                .addComponent(tf_correo)
+                                .addComponent(cb_puesto, 0, 198, Short.MAX_VALUE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addComponent(jLabel29)
+                        .addGap(26, 26, 26)))
+                .addContainerGap(125, Short.MAX_VALUE))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel29)
+                .addGap(48, 48, 48)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel32)
+                    .addComponent(tf_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(tf_nacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel27)
+                    .addComponent(tf_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_contra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel28))
+                .addGap(29, 29, 29)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel30)
+                    .addComponent(tf_correo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel31)
+                    .addComponent(cb_puesto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addComponent(jButton6)
+                .addContainerGap())
+        );
+
+        jTabbedPane4.addTab("crear", jPanel7);
+
+        treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Empleados");
+        jt_empleados.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jt_empleados.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt_empleadosMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(jt_empleados);
+
+        jButton2.setText("Visualizar");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(162, 162, 162)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(230, 230, 230)
+                        .addComponent(jButton2)))
+                .addContainerGap(176, Short.MAX_VALUE))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(jButton2)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(51, Short.MAX_VALUE))
+        );
+
+        jTabbedPane4.addTab("visualizar", jPanel8);
+
+        javax.swing.GroupLayout jd_empleadosLayout = new javax.swing.GroupLayout(jd_empleados.getContentPane());
+        jd_empleados.getContentPane().setLayout(jd_empleadosLayout);
+        jd_empleadosLayout.setHorizontalGroup(
+            jd_empleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane4)
+        );
+        jd_empleadosLayout.setVerticalGroup(
+            jd_empleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane4)
+        );
+
+        EliminarD.setText("Eliminar");
+        EliminarD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarDActionPerformed(evt);
+            }
+        });
+        menu_dulceria.add(EliminarD);
+
+        AgregarD.setText("Agregar");
+        AgregarD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AgregarDActionPerformed(evt);
+            }
+        });
+        menu_dulceria.add(AgregarD);
+
+        ModificarD.setText("Modificar");
+        menu_dulceria.add(ModificarD);
+
+        EliminarB.setText("jMenuItem1");
+        EliminarB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarBActionPerformed(evt);
+            }
+        });
+        menu_boleteria.add(EliminarB);
+
+        AgregarB.setText("jMenuItem2");
+        AgregarB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AgregarBActionPerformed(evt);
+            }
+        });
+        menu_boleteria.add(AgregarB);
+
+        ModificarB.setText("jMenuItem3");
+        menu_boleteria.add(ModificarB);
+
+        EliminarE.setText("Eliminar");
+        EliminarE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarEActionPerformed(evt);
+            }
+        });
+        menu_empleados.add(EliminarE);
+
+        AgregarE.setText("Agregar");
+        AgregarE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AgregarEActionPerformed(evt);
+            }
+        });
+        menu_empleados.add(AgregarE);
+
+        ModificarE.setText("Modificar");
+        menu_empleados.add(ModificarE);
+
+        jMenuItem1.setText("Eliminar");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        menu_aseos.add(jMenuItem1);
+
+        jMenuItem2.setText("Agregar");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        menu_aseos.add(jMenuItem2);
+
+        jMenuItem3.setText("Modificar");
+        menu_aseos.add(jMenuItem3);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
         jLabel1.setText("Log In");
+
+        jLabel2.setText("Usuario");
+
+        jLabel3.setText("Contra");
+
+        jLabel4.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel4.setText("No tiene cuenta? haga click aqui!");
+
+        jButton1.setText("Ingresar");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+
+        ps_contraActual.setText("jPasswordField1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(229, 229, 229)
-                .addComponent(jLabel1)
-                .addContainerGap(260, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(125, 125, 125)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel2))
+                        .addGap(26, 26, 26)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(ps_contraActual, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
+                            .addComponent(tf_usuarioActual)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(169, 169, 169)
+                        .addComponent(jLabel4))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(229, 229, 229)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1)
+                            .addComponent(jLabel1))))
+                .addContainerGap(168, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addComponent(jLabel1)
-                .addContainerGap(332, Short.MAX_VALUE))
+                .addGap(53, 53, 53)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(tf_usuarioActual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(ps_contraActual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(40, 40, 40)
+                .addComponent(jLabel4)
+                .addGap(39, 39, 39))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        // TODO add your handling code here:
+        dulces.add(new Dulce(tf_nombred.getText(), tf_sabor.getText(), (String) cb_categoria.getSelectedItem().toString()));
+        tf_nombred.setText("");
+        tf_sabor.setText("");
+
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        // TODO add your handling code here:
+        peliculas.add(new Pelicula(tf_nombrep.getText(), Integer.parseInt(tf_duracion.getText()), tf_clasificacion.getText(), (String) cb_categoria.getSelectedItem().toString()));
+        tf_nombrep.setText("");
+        tf_duracion.setText("");
+        tf_clasificacion.setText("");
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        // TODO add your handling code here:
+        empleados.add(new Empleado(tf_nombre.getText(), Integer.parseInt(tf_nacimiento.getText()), tf_usuario.getText(), tf_contra.getText(), tf_correo.getText(), (String) cb_puesto.getSelectedItem().toString()));
+        tf_nombre.setText("");
+        tf_contra.setText("");
+        tf_correo.setText("");
+        tf_usuario.setText("");
+        tf_nacimiento.setText("");
+
+    }//GEN-LAST:event_jButton6MouseClicked
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+
+        DefaultTreeModel modeloARBOL = (DefaultTreeModel) jt_empleados.getModel();
+        DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modeloARBOL.getRoot();
+
+        String nombre = "";
+        int nacimiento = 0;
+        String usuario = "";
+        String contra = "";
+        String correo = "";
+        String puesto = "";
+
+        for (int i = 0; i < empleados.size(); i++) {
+            nombre = (empleados.get(i)).getNombre();
+            nacimiento = (empleados.get(i)).getNacimiento();
+            usuario = (empleados.get(i)).getUsuario();
+            contra = (empleados.get(i)).getContra();
+            correo = (empleados.get(i)).getCorreo();
+            puesto = (empleados.get(i)).getPuesto();
+
+            if (puesto.equals("Boleteria")) {
+                boleteria.add(new DefaultMutableTreeNode(new Empleado(nombre, nacimiento, usuario, contra, correo, puesto)));
+
+            }
+            if (puesto.equals("Dulceria")) {
+                dulceria.add(new DefaultMutableTreeNode(new Empleado(nombre, nacimiento, usuario, contra, correo, puesto)));
+
+            }
+            if (puesto.equals("Aseo")) {
+                aseo.add(new DefaultMutableTreeNode(new Empleado(nombre, nacimiento, usuario, contra, correo, puesto)));
+
+            }
+        }
+        modeloARBOL.reload();
+
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        if (tf_usuarioActual.getText().equals(usuarioAdmin) && ps_contraActual.getText().equals(contraAdmin)) {
+            jd_empleados.setModal(true);
+            jd_empleados.pack();
+            jd_empleados.setLocationRelativeTo(this);
+            jd_empleados.setVisible(true);
+        } else {
+            String usuario = "";
+            String contra = "";
+            for (int i = 0; i < empleados.size(); i++) {
+                usuario = empleados.get(i).getUsuario();
+                contra = empleados.get(i).getContra();
+                if (tf_usuarioActual.getText().equals(usuario) && ps_contraActual.getText().equals(contra)) {
+                    String puesto = empleados.get(i).getPuesto();
+                    if (puesto.equals("Dulceria")) {
+                        jd_dulceria.setModal(true);
+                        jd_dulceria.pack();
+                        jd_dulceria.setLocationRelativeTo(this);
+                        jd_dulceria.setVisible(true);
+                    } else if (puesto.equals("Boleteria")) {
+                        jd_boleteria.setModal(true);
+                        jd_boleteria.pack();
+                        jd_boleteria.setLocationRelativeTo(this);
+                        jd_boleteria.setVisible(true);
+                    } else if (puesto.equals("Aseo")) {
+                        jd_aseo.setModal(true);
+                        jd_aseo.pack();
+                        jd_aseo.setLocationRelativeTo(this);
+                        jd_aseo.setVisible(true);
+                    }
+                }
+            }
+        }
+
+
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        // TODO add your handling code here:
+        aseos.add(new Implemento(tf_nombreA.getText(), tf_descripcion.getText(), (String) cb_funcion.getSelectedItem().toString()));
+        tf_nombreA.setText("");
+        tf_descripcion.setText("");
+
+
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+        // TODO add your handling code here:
+        DefaultTreeModel modeloARBOL = (DefaultTreeModel) jt_aseo.getModel();
+        DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modeloARBOL.getRoot();
+
+        String nombre = "";
+        String desc = "";
+        String funcion = "";
+
+        for (int i = 0; i < aseos.size(); i++) {
+            nombre = (aseos.get(i)).getNombre();
+            desc = (aseos.get(i)).getDescripcion();
+            funcion = (aseos.get(i)).getFuncion();
+
+            if (funcion.equals("Limpieza de pisos")) {
+                pisos.add(new DefaultMutableTreeNode(new Implemento(nombre, desc, funcion)));
+
+            }
+            if (funcion.equals("Limpieza de vidrios")) {
+                vidrios.add(new DefaultMutableTreeNode(new Implemento(nombre, desc, funcion)));
+
+            }
+            if (funcion.equals("Limpieza de mesas")) {
+                mesas.add(new DefaultMutableTreeNode(new Implemento(nombre, desc, funcion)));
+
+            }
+        }
+        modeloARBOL.reload();
+    }//GEN-LAST:event_jButton7MouseClicked
+
+    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
+        // TODO add your handling code here:
+        DefaultTreeModel modeloARBOL = (DefaultTreeModel) jt_dulceria.getModel();
+        DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modeloARBOL.getRoot();
+
+        String nombre = "";
+        String sabor = "";
+        String categoria = "";
+
+        for (int i = 0; i < dulces.size(); i++) {
+            nombre = (dulces.get(i)).getNombre();
+            sabor = (dulces.get(i)).getSabor();
+            categoria = (dulces.get(i)).getCategoria();
+
+            if (categoria.equals("Chocolates")) {
+                chocolates.add(new DefaultMutableTreeNode(new Implemento(nombre, sabor, categoria)));
+
+            }
+            if (categoria.equals("Paletas")) {
+                paletas.add(new DefaultMutableTreeNode(new Implemento(nombre, sabor, categoria)));
+
+            }
+            if (categoria.equals("Chicles")) {
+                chicles.add(new DefaultMutableTreeNode(new Implemento(nombre, sabor, categoria)));
+            }
+            if (categoria.equals("Gomitas")) {
+                gomitas.add(new DefaultMutableTreeNode(new Implemento(nombre, sabor, categoria)));
+
+            }
+        }
+        modeloARBOL.reload();
+    }//GEN-LAST:event_jButton8MouseClicked
+
+    private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
+        // TODO add your handling code here:
+        DefaultTreeModel modeloARBOL = (DefaultTreeModel) jt_peliculas.getModel();
+        DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modeloARBOL.getRoot();
+
+        String nombre = "";
+        String clasificacion = "";
+        String categoria = "";
+        int duracion = 0;
+
+        for (int i = 0; i < peliculas.size(); i++) {
+            nombre = (peliculas.get(i)).getNombre();
+            duracion = (peliculas.get(i)).getDuracion();
+            clasificacion = (peliculas.get(i)).getClasificacion();
+
+            categoria = (peliculas.get(i)).getCategoria();
+
+            if (categoria.equals("Terror")) {
+                terror.add(new DefaultMutableTreeNode(new Pelicula(nombre, duracion, clasificacion, categoria)));
+
+            }
+            if (categoria.equals("Comedia")) {
+                comedia.add(new DefaultMutableTreeNode(new Pelicula(nombre, duracion, clasificacion, categoria)));
+
+            }
+            if (categoria.equals("Romance")) {
+                romance.add(new DefaultMutableTreeNode(new Pelicula(nombre, duracion, clasificacion, categoria)));
+            }
+            if (categoria.equals("Drama")) {
+                drama.add(new DefaultMutableTreeNode(new Pelicula(nombre, duracion, clasificacion, categoria)));
+            }
+            if (categoria.equals("Accion")) {
+                accion.add(new DefaultMutableTreeNode(new Pelicula(nombre, duracion, clasificacion, categoria)));
+            }
+            if (categoria.equals("Infantil")) {
+                infantil.add(new DefaultMutableTreeNode(new Pelicula(nombre, duracion, clasificacion, categoria)));
+            }
+        }
+        modeloARBOL.reload();
+    }//GEN-LAST:event_jButton9MouseClicked
+
+    private void jt_dulceriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_dulceriaMouseClicked
+        // TODO add your handling code here:
+        if (evt.isMetaDown()) {
+            menu_dulceria.show(evt.getComponent(), evt.getX(), evt.getY());
+        }
+    }//GEN-LAST:event_jt_dulceriaMouseClicked
+
+    private void jt_empleadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_empleadosMouseClicked
+        // TODO add your handling code here:
+        if (evt.isMetaDown()) {
+            menu_empleados.show(evt.getComponent(), evt.getX(), evt.getY());
+        }
+    }//GEN-LAST:event_jt_empleadosMouseClicked
+
+    private void EliminarEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarEActionPerformed
+        // TODO add your handling code here:
+        int response = JOptionPane.showConfirmDialog(this, "Seguro que desea eliminar?", "confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (response == JOptionPane.OK_OPTION) {
+            DefaultTreeModel m = (DefaultTreeModel) jt_empleados.getModel();
+
+            m.removeNodeFromParent(nodo);
+            m.reload();
+        }
+    }//GEN-LAST:event_EliminarEActionPerformed
+
+    private void EliminarDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarDActionPerformed
+        // TODO add your handling code here:
+        int response = JOptionPane.showConfirmDialog(this, "Seguro que desea eliminar?", "confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (response == JOptionPane.OK_OPTION) {
+            DefaultTreeModel m = (DefaultTreeModel) jt_dulceria.getModel();
+            m.removeNodeFromParent(nodo);
+            m.reload();
+        }
+    }//GEN-LAST:event_EliminarDActionPerformed
+
+    private void EliminarBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarBActionPerformed
+        // TODO add your handling code here:
+        int response = JOptionPane.showConfirmDialog(this, "Seguro que desea eliminar?", "confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (response == JOptionPane.OK_OPTION) {
+            DefaultTreeModel m = (DefaultTreeModel) jt_peliculas.getModel();
+            m.removeNodeFromParent(nodo);
+            m.reload();
+        }
+    }//GEN-LAST:event_EliminarBActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        int response = JOptionPane.showConfirmDialog(this, "Seguro que desea eliminar?", "confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (response == JOptionPane.OK_OPTION) {
+            DefaultTreeModel m = (DefaultTreeModel) jt_aseo.getModel();
+            m.removeNodeFromParent(nodo);
+            m.reload();
+        }
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void AgregarDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarDActionPerformed
+        // TODO add your handling code here:
+        jd_dulceria.setModal(true);
+        jd_dulceria.pack();
+        jd_dulceria.setLocationRelativeTo(this);
+        jd_dulceria.setVisible(true);
+    }//GEN-LAST:event_AgregarDActionPerformed
+
+    private void AgregarBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarBActionPerformed
+        // TODO add your handling code here:
+        jd_boleteria.setModal(true);
+        jd_boleteria.pack();
+        jd_boleteria.setLocationRelativeTo(this);
+        jd_boleteria.setVisible(true);
+    }//GEN-LAST:event_AgregarBActionPerformed
+
+    private void AgregarEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarEActionPerformed
+        // TODO add your handling code here:
+        jd_empleados.setModal(true);
+        jd_empleados.pack();
+        jd_empleados.setLocationRelativeTo(this);
+        jd_empleados.setVisible(true);
+    }//GEN-LAST:event_AgregarEActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        jd_aseo.setModal(true);
+        jd_aseo.pack();
+        jd_aseo.setLocationRelativeTo(this);
+        jd_aseo.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -69,16 +1143,24 @@ public class Principal extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -91,6 +1173,122 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem AgregarB;
+    private javax.swing.JMenuItem AgregarD;
+    private javax.swing.JMenuItem AgregarE;
+    private javax.swing.JMenuItem EliminarB;
+    private javax.swing.JMenuItem EliminarD;
+    private javax.swing.JMenuItem EliminarE;
+    private javax.swing.JMenuItem ModificarB;
+    private javax.swing.JMenuItem ModificarD;
+    private javax.swing.JMenuItem ModificarE;
+    private javax.swing.JComboBox<String> cb_categoria;
+    private javax.swing.JComboBox<String> cb_funcion;
+    private javax.swing.JComboBox<String> cb_puesto;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTabbedPane jTabbedPane3;
+    private javax.swing.JTabbedPane jTabbedPane4;
+    private javax.swing.JDialog jd_aseo;
+    private javax.swing.JDialog jd_boleteria;
+    private javax.swing.JDialog jd_dulceria;
+    private javax.swing.JDialog jd_empleados;
+    private javax.swing.JTree jt_aseo;
+    private javax.swing.JTree jt_dulceria;
+    private javax.swing.JTree jt_empleados;
+    private javax.swing.JTree jt_peliculas;
+    private javax.swing.JPopupMenu menu_aseos;
+    private javax.swing.JPopupMenu menu_boleteria;
+    private javax.swing.JPopupMenu menu_dulceria;
+    private javax.swing.JPopupMenu menu_empleados;
+    private javax.swing.JPasswordField ps_contraActual;
+    private javax.swing.JTextField tf_clasificacion;
+    private javax.swing.JTextField tf_contra;
+    private javax.swing.JTextField tf_correo;
+    private javax.swing.JTextField tf_descripcion;
+    private javax.swing.JTextField tf_duracion;
+    private javax.swing.JTextField tf_nacimiento;
+    private javax.swing.JTextField tf_nombre;
+    private javax.swing.JTextField tf_nombreA;
+    private javax.swing.JTextField tf_nombred;
+    private javax.swing.JTextField tf_nombrep;
+    private javax.swing.JTextField tf_sabor;
+    private javax.swing.JTextField tf_usuario;
+    private javax.swing.JTextField tf_usuarioActual;
     // End of variables declaration//GEN-END:variables
+    ArrayList<Empleado> empleados = new ArrayList();
+    ArrayList<Dulce> dulces = new ArrayList();
+    ArrayList<Pelicula> peliculas = new ArrayList();
+    ArrayList<Implemento> aseos = new ArrayList();
+    String usuarioAdmin = "administrador";
+    String contraAdmin = "hola";
+    DefaultMutableTreeNode nodo;
+    DefaultMutableTreeNode boleteria = new DefaultMutableTreeNode("Boleteria");
+    DefaultMutableTreeNode dulceria = new DefaultMutableTreeNode("Dulceria");
+    DefaultMutableTreeNode aseo = new DefaultMutableTreeNode("Aseo");
+    DefaultMutableTreeNode terror = new DefaultMutableTreeNode("Terror");
+    DefaultMutableTreeNode comedia = new DefaultMutableTreeNode("Comedia");
+    DefaultMutableTreeNode romance = new DefaultMutableTreeNode("Romance");
+    DefaultMutableTreeNode drama = new DefaultMutableTreeNode("Drama");
+    DefaultMutableTreeNode accion = new DefaultMutableTreeNode("Accion");
+    DefaultMutableTreeNode infantil = new DefaultMutableTreeNode("Infantil");
+
+    DefaultMutableTreeNode chocolates = new DefaultMutableTreeNode("Chocolates");
+    DefaultMutableTreeNode gomitas = new DefaultMutableTreeNode("Gomitas");
+    DefaultMutableTreeNode chicles = new DefaultMutableTreeNode("Chicles");
+    DefaultMutableTreeNode paletas = new DefaultMutableTreeNode("Paletas");
+
+    DefaultMutableTreeNode pisos = new DefaultMutableTreeNode("Limpieza de pisos");
+    DefaultMutableTreeNode vidrios = new DefaultMutableTreeNode("Limpieza de vidrios");
+    DefaultMutableTreeNode mesas = new DefaultMutableTreeNode("Limpieza de mesas");
+
 }
